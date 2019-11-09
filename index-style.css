@@ -18,7 +18,11 @@ h3 {
 	font-size: 4em;
 	margin-top: -.5%;
 	/*color: #FEF175;*/
-	color: SteelBlue;
+	color: white;
+	background-color: SteelBlue;
+	padding: 1.5%;
+	max-width: 50%;
+	margin-left: 25%;
 }
 
 p {
@@ -26,14 +30,23 @@ p {
 }
 
 #text-box {
-	background-color: #FEDC01;
+	background-color: #FEF175;
 	border: none;
-	color: black;
+	color: tomato;
 	font-family: raleway;
 	font-size: 1em;
 	margin-right: 2%;
+	/*margin-left: 12%;*/
 	text-align:center;
+	max-width: 70%;
+	/*font-weight: bold;*/
 	/*padding: 2%;*/
+	font-style: italic;
+}
+
+#text-box:hover {
+	/*border: dotted 2px black;*/
+	color: black;
 }
 
 #wrap {
