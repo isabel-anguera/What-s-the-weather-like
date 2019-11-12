@@ -1,5 +1,6 @@
 var input = document.getElementById("text-box");
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=New York&APPID=3f56d66bf44e9bbf90cbf9c5a0db23a5';
+var apiKey = '3f56d66bf44e9bbf90cbf9c5a0db23a5';
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=New York&APPID=' + apiKey;
 var userInput = document.getElementById("text-box").value;
 console.log(userInput);
 
