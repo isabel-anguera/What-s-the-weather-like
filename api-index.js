@@ -11,7 +11,7 @@ var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + userInput +'&AP
 console.log('Hello, Sheet!');
 
 window.onload = requestJSON;
-setInterval(requestJSON, 5000);
+setInterval(requestJSON, 2000);
 
 function requestJSON() {
   url = 'https://api.openweathermap.org/data/2.5/weather?q=' + input.value +'&APPID=' + apiKey;
