@@ -1,17 +1,20 @@
 var input = document.getElementById("text-box");
-var apiKey = '3f56d66bf44e9bbf90cbf9c5a0db23a5';
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=New York&APPID=' + apiKey;
 var userInput = document.getElementById("text-box").value;
 console.log(userInput);
-
 var searchedCities = [];
+
+document.getElementById("text-box").onkeypress = function() {console.log(event)};
+
+var apiKey = '3f56d66bf44e9bbf90cbf9c5a0db23a5';
+var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + userInput +'&APPID=' + apiKey;
 
 console.log('Hello, Sheet!');
 
 window.onload = requestJSON;
-setInterval(requestJSON, 10000);
+setInterval(requestJSON, 5000);
 
 function requestJSON() {
+  url = 'https://api.openweathermap.org/data/2.5/weather?q=' + input.value +'&APPID=' + apiKey;
   fetch(url)
     .then(response => response.json())
     .then(gotJSON);
@@ -20,7 +23,9 @@ function requestJSON() {
 function gotJSON(json) {
   console.log('Update Data');
   const weatherInfo = json.weather;
+  console.log(json);
   // const mainInfo = json.main;
+
 
   const answer = document.getElementById('answer');
 
@@ -46,6 +51,12 @@ function gotJSON(json) {
     console.log(input);
 
 
+  }
+
+  function checkKey() {
+    if (event.key == 'Enter') {
+      requestJSON();
+    }
   }
 
   // for (const main of mainInfo) {
