@@ -47,6 +47,7 @@ p {
 #text-box:hover {
 	/*border: dotted 2px black;*/
 	color: black;
+	background-color: tomato;
 }
 
 #wrap {
